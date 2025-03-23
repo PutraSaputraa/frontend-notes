@@ -10,13 +10,13 @@ const UserList = () => {
   }, []);
 
   const getNotes = async () => {
-    const response = await axios.get("http://localhost:4000/notes");
+    const response = await axios.get(`https://anunotesbackend-954509048139.us-central1.run.app/notes`);
     setNotes(response.data);
   };
 
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/notes/${id}`);
+      await axios.delete(`https://anunotesbackend-954509048139.us-central1.run.app/notes/${id}`);
       getNotes();
     } catch (error) {
       console.log(error);
