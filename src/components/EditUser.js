@@ -15,7 +15,7 @@ const EditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4000/notes/${id}`, {
+      await axios.put(`https://anunotesbackend-954509048139.us-central1.run.app/notes/${id}`, {
         judul,
         isi_catatan,
       });
@@ -26,7 +26,7 @@ const EditUser = () => {
   };
 
   const getUserById = async () => {
-    const response = await axios.get(`http://localhost:4000/notes/${id}`);
+    const response = await axios.get(`https://anunotesbackend-954509048139.us-central1.run.app/notes/${id}`);
     setJudul(response.data.judul);
     setIsiCatatan(response.data.isi_catatan);
   };
