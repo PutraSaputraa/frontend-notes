@@ -10,7 +10,7 @@ const AddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`https://anunotesbackend-954509048139.us-central1.run.app/notes`, {
+      await axios.post(`https://be-954509048139.us-central1.run.app/notes`, {
         judul,
         isi_catatan,
       });
